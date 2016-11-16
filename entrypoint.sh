@@ -98,7 +98,7 @@ http {
     ssl_session_cache shared:SSL:50m;
     ssl_session_timeout 1d;
     add_header Strict-Transport-Security "max-age=63072000; includeSubdomains; preload";
-    add_header X-Frame-Options SAMEORIGIN;
+    #add_header X-Frame-Options SAMEORIGIN;
     #add_header X-Content-Type-Options nosniff;
     ssl_session_tickets off;
     ssl_stapling on;
