@@ -143,7 +143,7 @@ http {
       proxy_pass http://assets;
     }
 
-    location /iD {
+    location /edit {
       proxy_pass http://assets;
     }
 
