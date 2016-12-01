@@ -137,14 +137,29 @@ http {
 
     location /assets {
       proxy_pass http://assets;
+      proxy_set_header Host \$host;
+      proxy_set_header X-Real-IP \$remote_addr;
+      proxy_set_header X-Forwarded-For \$remote_addr;
+      proxy_set_header X-Forwarded-Proto \$scheme;
+      proxy_cache   off;
     }
 
     location /public {
       proxy_pass http://assets;
+      proxy_set_header Host \$host;
+      proxy_set_header X-Real-IP \$remote_addr;
+      proxy_set_header X-Forwarded-For \$remote_addr;
+      proxy_set_header X-Forwarded-Proto \$scheme;
+      proxy_cache   off;
     }
 
     location /edit {
       proxy_pass http://assets;
+      proxy_set_header Host \$host;
+      proxy_set_header X-Real-IP \$remote_addr;
+      proxy_set_header X-Forwarded-For \$remote_addr;
+      proxy_set_header X-Forwarded-Proto \$scheme;
+      proxy_cache   off;
     }
 
     location /.well-known/acme-challenge {
