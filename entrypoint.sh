@@ -78,15 +78,15 @@ http {
   gzip_types text/plain image/png image/jpg application/javascript text/css text/html;
 
   upstream web {
-    server ${WEB_1_PORT_4000_TCP_ADDR}:4000;
+    server web:4000;
   }
 
   upstream tiles {
-    server ${TILES_1_PORT_4001_TCP_ADDR}:4001;
+    server tiles:4001;
   }
 
   upstream assets {
-    server ${ASSETS_1_PORT_80_TCP_ADDR}:80;
+    server assets:80;
   }
 
   server {
